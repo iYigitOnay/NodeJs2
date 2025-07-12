@@ -1,7 +1,12 @@
 var http = require("http");
 
 var server = http.createServer((request, response) => {
-  console.log(request.url);
+  response.setHeader("Content-Type", "text/plain");
+  response.statusCode = 200;
+  response.statusMessage = "OK";
+
+  response.write("<h1>Hello, World!<h1>");
+  response.write("This is a simple HTTP server.");
 
   response.end;
 });
