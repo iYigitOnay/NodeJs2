@@ -8,7 +8,7 @@ var server = http.createServer((request, response) => {
   response.write("<h1>Hello, World!<h1>");
   response.write("This is a simple HTTP server.");
 
-  response.end;
+  response.end();
 });
 
 server.listen(3000);
