@@ -6,7 +6,11 @@ var server = http.createServer((request, response) => {
     response.write("<html><body><h1>Hello, World!</h1></body></html>");
   } else {
     response.writeHead(404, { "Content-Type": "text/plain" });
-    response.write("404 Not Found");
+    response.write(`<html>
+                    <body>
+                     <title>BLOG</title>
+                    </body>
+                  </html>`);
   }
   response.end();
 });
